@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
-        text = request.form.get['text']
+        text = request.form.get('text')
         print(text)
         s = TextBlob(text).sentiment
         return (render_template("index.html", result=s))
