@@ -10,7 +10,7 @@ def index():
         s = TextBlob(text).sentiment
         return (render_template("index.html", result=s))
     else:
-        return(render_template("index.html", result1="Please Try Again"))
+        return(render_template("index.html", result="Please Try Again"))
 
 if __name__ == "__main__":
     app.run()
